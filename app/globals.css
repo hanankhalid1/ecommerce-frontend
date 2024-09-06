@@ -1,0 +1,79 @@
+
+@tailwind base;
+@tailwind components;
+.bg-topsell {
+    background: url('/assets/imgs/page/homepage1/bg-topsell.png') no-repeat center center;
+    background-size: cover;
+  }
+  
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.checked-items {
+  background-color: "#OE224D"; 
+}
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+}
+
+.carousel-track {
+    display: flex;
+    width: 200%; /* Adjust based on the number of slides */
+    /* transition: transform 0.5s ease-in-out; Default transition */
+}
+
+.fade-in-right {
+  animation: fadeInRight 1s ease-out;
+}
+
+.fade-out-left {
+  animation: fadeOutLeft 0.5s ease-in;
+}
+/* Custom styles for the slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  width: 16px;
+  height: 16px;
+  background: #FD9636; /* Same color as the track */
+  cursor: pointer;
+  border-radius: 50%;
+  appearance: none;
+  position: relative;
+  z-index: 1; /* Ensure thumb is above the track */
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #FD9636; /* Same color as the track */
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  background: #FD9636; /* Same color as the track */
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+
+@tailwind utilities;
